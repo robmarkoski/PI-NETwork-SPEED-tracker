@@ -22,7 +22,6 @@ Copy the script someone onto your device.
 ```
 git clone https://github.com/robmarkoski/PI-NETwork-SPEED-tracker
 ```
-
 Schedule it to run hourly with cron
 
 ```
