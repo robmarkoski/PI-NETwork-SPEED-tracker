@@ -33,12 +33,7 @@ Then add the following to run it on the hour every hour.
 0 * * * * /location/of/script/pinetspeed.py
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+It should be running now. Setup your tiles in Initialstate and you are off and running.
 
 ## Authors
 
