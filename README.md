@@ -1,86 +1,57 @@
-# Speedtest Tracker
+# PI NETwork SPEED tracker
 
-Keep your ISP in check, and track your connection speed. This script when set to run sporadically will check your internet via speedtest-cli then push the data to an Initialstate bucket.
+Keep your ISP in check and ensure your getting the speeds you paid for. This script when run will log your current network performance (ping time, download and upload speeds) to an Initialstate bucket. Run it on an hourly schedule to get a running stream of your network performance.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This script is painfully easy to get up and running.
 
 ### Prerequisites
 
-speedtest-cli
+You will need to have an Initialstate account and have the python libaries installed. [See Here](https://github.com/InitialState/wunderground-sensehat/wiki/Part-1.-Initial-State) 
+
+Net you also need [speedtest-cli](https://github.com/sivel/speedtest-cli) installed.
+
 ```
-Give examples
+pip install speedtest-cli
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+Copy the script someone onto your device. 
 ```
-Give the example
+git clone https://github.com/robmarkoski/PI-NETwork-SPEED-tracker
 ```
 
-And repeat
+Schedule it to run hourly with cron
 
 ```
-until finished
+crontab -e
+```
+Then add the following to run it on the hour every hour.
+
+```
+0 * * * * /location/of/script/pinetspeed.py
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Rob Markoski** - [GitHub](https://github.com/robmarkoski)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL3 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [Initialstate](https://www.initialstate.com)
+* Sivel - [Speedtest-Cli](https://github.com/sivel/speedtest-cli)
